@@ -29,7 +29,7 @@ export function SignUp() {
     password:password,
     firstName:name
    }
-   const resp = await axios.post("http://localhost:5050/api/user",data)
+   const resp = await axios.post("https://loginresiterbackend.onrender.com/api/user",data)
    if(resp.data.responseStatus === "success"){
     toast.current.show({severity:'success', summary: 'Success', detail:resp.data.responseMsg, life: 3000});
    }else {
